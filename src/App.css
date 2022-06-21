@@ -6,9 +6,50 @@
   background-color: #fafafa;
 }
 
+.app__posts {
+  background-color: #fafafa;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.app__postsRight {
+  margin-left: 20px;
+}
+
 .app__header {
-  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #ffffff;
   padding: 20px;
   border-bottom: 1px solid lightgray;
   object-fit: contain;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app_headerImage {
+  object-fit: contain;
+}
+
+.app__loginContainer--signedIn {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.app__loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+}
+
+.app__signup {
+  display: flex;
+  flex-direction: column;
 }

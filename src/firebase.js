@@ -1,8 +1,11 @@
-import firebase from "firebase";
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-const firebaseApp = firebase.initializeApp({
+const firebaseApp = initializeApp({
   apiKey: "AIzaSyBU7LHwZ8LIjScejbmCynPhOQdNgIhCFc8",
   authDomain: "instagram-clone-c7372.firebaseapp.com",
   projectId: "instagram-clone-c7372",
@@ -12,10 +15,8 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-HGQGY10STY",
 });
 
-const db = firebaseApp.firestore();
-const auth = firebase.auth();
-const storage = firebase.storage();
+const db = getFirestore(firebaseApp);
+const auth = getAuth(firebaseApp);
+const storage = getStorage(firebaseApp);
 
 export { db, auth, storage };
-
-export default firebaseConfig;
